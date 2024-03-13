@@ -5,6 +5,7 @@
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta http-equiv="Expires" content="0">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,7 +41,7 @@ img.emoji {
 <link rel="stylesheet" id="contact-widgets-social-block-css" href="./Home_files/social-block.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="primer-css" href="./Home_files/style.css" type="text/css" media="all">
 <style id="primer-inline-css" type="text/css">
-.site-header{background-image:url("./Home_files/bg.jpg");}
+.site-header{background-image:url("./Home_files/2.png");}
 .site-title a,.site-title a:visited{color:#ffffff;}.site-title a:hover,.site-title a:visited:hover{color:rgba(255, 255, 255, 0.8);}
 .site-description{color:#ffffff;}
 .hero,.hero .widget h1,.hero .widget h2,.hero .widget h3,.hero .widget h4,.hero .widget h5,.hero .widget h6,.hero .widget p,.hero .widget blockquote,.hero .widget cite,.hero .widget table,.hero .widget ul,.hero .widget ol,.hero .widget li,.hero .widget dd,.hero .widget dt,.hero .widget address,.hero .widget code,.hero .widget pre,.hero .widget .widget-title,.hero .page-header h1{color:#ffffff;}
@@ -399,7 +400,44 @@ blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comme
 	<style>[class*="fa fa-"]{font-family: FontAwesome !important;}</style><script type="text/javascript" src="./Home_files/navigation.min.js.download"></script>
 <script type="text/javascript" src="./Home_files/skip-link-focus-fix.min.js.download"></script>
 <script type="text/javascript" src="./Home_files/wp-embed.min.js.download"></script>
+<script>
+	// $(document).ready(function() {
+	// 	var images = [
+	// 		"./Home_files/2.png",
+	// 		"./Home_files/3.png",
+	// 		"./Home_files/5.png",
+	// 		"./Home_files/7.png",
+	// 		"./Home_files/9.png"
+	// 	];
+	// 	var i = 0;
+	
+	// 	setInterval(function() {
+	// 		$('.site-header').css('background-image', 'url(' + images[i] + ')');
+	// 		i = i + 1;
+	// 		if (i == images.length) {
+	// 			i =  0;
+	// 		}
+	// 	}, 2000); // 更换图片的间隔时间，以毫秒为单位，这里设置为每3秒更换一次
+	// });
 
+	$(document).ready(function() {
+    var images = [
+			"./Home_files/2.png",
+			"./Home_files/3.png",
+			"./Home_files/5.png",
+			"./Home_files/7.png",
+			"./Home_files/9.png"
+    ];
+    var i = 0;
+
+    function changeBackground() {
+        $('.site-header').css('background-image', 'url(' + images[i] + ')');
+        i = (i + 1) % images.length;
+    }
+
+    setInterval(changeBackground, 5000); // Change interval to 5 seconds to match animation
+});
+	</script>
 
 
 
