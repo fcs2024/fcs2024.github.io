@@ -166,7 +166,47 @@ blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comme
 	font-size: 20px;
 }
 
-</style></head>
+</style>
+<style>
+	#container { width: 962px; height: 600px; }
+	.amap-icon img,
+    .amap-marker-content img {
+      width: 25px;
+      height: 34px;
+    }
+
+    .marker {
+      position: absolute;
+      top: -20px;
+      right: -118px;
+      color: #fff;
+      padding: 4px 10px;
+      box-shadow: 1px 1px 1px rgba(10, 10, 10, .2);
+      white-space: nowrap;
+      font-size: 12px;
+      font-family: "";
+      background-color: #25A5F7;
+      border-radius: 3px;
+    }
+
+    .input-card {
+      width: 18rem;
+      z-index: 170;
+    }
+
+    .input-card .btn {
+      margin-right: .8rem;
+    }
+
+    .input-card .btn:last-child {
+      margin-right: 0;
+    }
+</style>
+
+<!-- <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/> -->
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=f91f53092fd2c8c28f6d30f5b2a7b412"></script>
+
+</head>
 
 <body class="page-template-default page page-id-19 custom-header-image layout-one-column-wide vsc-initialized" style="">
 
@@ -259,15 +299,26 @@ blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comme
 
 
 		<div class="page-content">
+				<h4>Chongqing Kingworld Hotel (重庆君豪大饭店), Chongqing, P.R. China</h4>
 				<p>
-					Comming soon.
-				</p>
-				<!-- <h4>Chengdu marriott hotel (成都首座万豪酒店), Chengdu, P.R. China</h4>
-				<p>Accommodation：Beijing Friendship Hotel Building 2  Standard Room  480RMB/room/day (4 star: contain breakfast and 15% service fee)<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				Address: No 999 TianFu Avenue North, High-Tech Zone, Chengdu, Sichuan, China, 610041(高新区天府大道北段 999 号, 成都, 四川)<br>Reservation: +86 028-88088888</p>
-				<img src="./Location and venue – ICICS 2019_files/map.png" class="img-responsive">
-                <div id="map"></div> -->
+				Address: No. 9, Jinyuan Road, Jiangbei District, Chongqing (重庆市江北区金源路9号)<br>Reservation: +86 023-86338888</p>
+				<img src="./Location and venue – ICICS 2019_files/junhao.jpeg" class="img-responsive">
+				<div id="container"></div>
+<script type="text/javascript">
+    // 创建地图实例
+    var map = new AMap.Map("container", {
+        zoom: 15,
+        center: [106.526504, 29.559299],
+        resizeEnable: true
+    });
+	
+    var marker = new AMap.Marker({
+		icon: "./Location and venue – ICICS 2019_files/marker.png",
+            position: [106.526504, 29.559299],
+			offset: new AMap.Pixel(-13, -30)
+        });
+	map.add(marker);
+</script>
 
 	</div><!-- .page-content -->
 	
